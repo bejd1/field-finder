@@ -1,0 +1,109 @@
+.pitch-info-container {
+  font-family: var(--font-poppins);
+  font-weight: 300;
+}
+
+.pitch-info-container h4 {
+  font-weight: 500;
+}
+
+.pitch-info-container-text-top {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pitch-info-container-photos-title,
+.pitch-info-container-title {
+  margin-left: 150px;
+}
+
+.pitch-info-container-map-title {
+  margin-left: 150px;
+}
+
+.pitch-info-container-map > p {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.pitch-info-container-text-left,
+.pitch-info-container-text-center,
+.pitch-info-container-text-right {
+  text-align: center;
+}
+
+.pitch-info-container-text-right > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-icon {
+  padding-left: 3px;
+}
+
+.pitch-info-container-photos-1-img,
+.pitch-info-container-photos-2-img,
+.pitch-info-container-photos-3-img {
+  height: 300px;
+  width: 500px;
+  max-width: 500px;
+  padding: 20px 0;
+}
+
+.pitch-info-container-photos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1550px) {
+  .pitch-info-container-photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pitch-info-container-text-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pitch-info-container-photos-title,
+  .pitch-info-container-title {
+    margin-left: 80px;
+  }
+  .pitch-info-container-photos-1-img,
+  .pitch-info-container-photos-2-img,
+  .pitch-info-container-photos-3-img {
+    height: 300px;
+    max-width: 460px;
+    width: 449px;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .pitch-info-container-photos-title,
+  .pitch-info-container-title {
+    margin-left: 25px;
+  }
+  .pitch-info-container-photos-1-img,
+  .pitch-info-container-photos-2-img,
+  .pitch-info-container-photos-3-img {
+    height: 200px;
+    max-width: 280px;
+    width: 280px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .pitch-info-container-photos-1-img,
+  .pitch-info-container-photos-2-img,
+  .pitch-info-container-photos-3-img {
+    height: 170px;
+    max-width: 220px;
+    width: 220px;
+  }
+}

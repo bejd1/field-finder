@@ -1,0 +1,39 @@
+.about-us-container {
+  position: relative;
+  background-color: #f9f9f9;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0 81px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-6xl);
+  text-align: center;
+  font-size: var(--font-size-25xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.about-us-container h3 {
+  align-self: stretch;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.about-us-container-text p {
+  font-size: var(--font-size-base);
+  font-weight: 200;
+  margin: 0;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 420px) {
+  .about-us-container h3 {
+    font-size: 24px;
+  }
+  .about-us-container {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.footer p {
+  text-align: center;
+  font-weight: 200;
+  width: 100%;
+  margin: 2px;
+}

@@ -1,0 +1,107 @@
+.main {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-21xl) 205px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  text-align: center;
+  font-size: 44px;
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.main-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: var(--font-size-base);
+  margin: 0 100px;
+}
+
+.main h3 {
+  align-self: stretch;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+
+.main-container-left-text p,
+.main-container-center-text p,
+.main-container-right-text p {
+  margin: 0;
+}
+.main-container-left-text {
+  position: relative;
+  font-weight: 200;
+  display: inline-block;
+  width: 168px;
+}
+.main-container-left,
+.main-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.main-container-center-text {
+  position: relative;
+  font-weight: 200;
+}
+.main-container-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+  text-align: left;
+}
+.main-container-right-text {
+  position: relative;
+  font-weight: 200;
+  display: inline-block;
+  width: 115px;
+}
+
+@media screen and (max-width: 1500px) {
+  .main-container {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    padding-left: var(--padding-81xl);
+    padding-top: var(--padding-21xl);
+    padding-right: var(--padding-81xl);
+    box-sizing: border-box;
+  }
+  .main-container {
+    margin: 0 130px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main-container {
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .main,
+  .main-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main h3 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+  }
+}

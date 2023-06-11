@@ -1,0 +1,129 @@
+.nav-burgerMenu {
+  color: black;
+}
+
+.nav-logo-top-text,
+.nav-logo-bottom-text {
+  color: #fff;
+}
+
+.nav-logo-top-text2 {
+  color: var(--color-cornflowerblue);
+}
+.nav-logo-top,
+.nav-logo-bottom-text {
+  position: relative;
+}
+.nav-logo,
+.nav-logo-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.nav-logo-bottom {
+  margin-top: -17px;
+  font-size: var(--font-size-base);
+}
+.nav-logo {
+  width: 199px;
+  height: 57px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.nav-links {
+  position: relative;
+  font-weight: 600;
+}
+
+.nav-links-contact,
+.nav-links-home {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 30px;
+}
+
+.nav-links-home:hover,
+.nav-links-aboutus:hover,
+.nav-links-contact:hover {
+  color: #4b8df0;
+  transition: 0.3 ease;
+}
+
+.nav-links,
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+.nav-links {
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.nav {
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: var(--font-size-16xl);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+.home-burgerMenu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  right: 40px;
+  top: 35px;
+  z-index: 224;
+}
+.home-burgerMenu-top,
+.home-burgerMenu-mid,
+.home-burgerMenu-bot {
+  z-index: 22;
+  top: 10px;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 6px;
+  background-color: #3d86f3;
+}
+
+.nav-links-question-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-links-contact,
+  .nav-question-mark,
+  .nav-links-home {
+    display: none;
+  }
+  .home-burgerMenu {
+    display: block;
+    z-index: 20;
+  }
+  .nav-links-question-mark {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .nav-logo-top {
+    font-size: var(--font-size-9xl);
+  }
+  .home-burgerMenu {
+    right: 30px;
+  }
+}
