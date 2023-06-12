@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import NavigationTop from "../../components/Navigation/NavigationTop";
 import "./Nav.css";
 import { pitchDataBase } from "../../components/PitchDataBase/PitchDataBase";
+import { Input } from "@nextui-org/react";
 
 interface Pitch {
-  id?: number;
+  id: number;
   city: string;
   name: string;
   address: string;
@@ -36,9 +37,8 @@ const Nav = () => {
   return (
     <div className="navigation">
       <NavigationTop />
-
       <input
-        className="navigation-child"
+        className="navigation-input"
         type="text"
         placeholder="Find pitch near you by place"
         value={searchQuery}

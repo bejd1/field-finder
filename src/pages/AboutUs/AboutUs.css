@@ -27,7 +27,7 @@
   font-size: var(--font-size-base);
   font-weight: 200;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 420px) {
   .about-us-container h3 {
