@@ -2,7 +2,8 @@ import "./PitchInfo.css";
 import "../../components/PitchDataBase/PitchDataBase";
 import { pitchDataBase } from "../../components/PitchDataBase/PitchDataBase";
 import { X, Check2 } from "react-bootstrap-icons";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
 
 export type PitchProps = {
   id: number;
@@ -28,126 +29,108 @@ export type PitchProps = {
   photo3: string;
 };
 
-interface RouteParams {
-  id: string;
-  [key: string]: string | undefined;
-}
-
 const PitchInfo: React.FC<PitchProps> = () => {
-  const { id } = useParams<RouteParams>();
-  const pitchInfo = pitchDataBase
-    .filter((pitch) => pitch.id === parseInt(id!))
-    .map((pitch) => {
-      const {
-        id,
-        city,
-        name,
-        address,
-        phoneNumber,
-        webPage,
-        email,
-        monday,
-        tuesday,
-        wednesday,
-        thursday,
-        friday,
-        saturday,
-        sunday,
-        parking,
-        dressingRoom,
-        toilet,
-        prize,
-        photo1,
-        photo2,
-        photo3,
-      } = pitch;
+  const [items, setItems] = useState<PitchProps[]>([...pitchDataBase]);
+  const { id } = useParams();
 
-      return (
-        <div className="pitch-info-container-map" key={id}>
-          <h4 className="pitch-info-container-title">Info</h4>
-          <div className="pitch-info-container-text-top">
-            <div className="pitch-info-container-text-left">
-              <h4>Football pitch</h4>
-              <p>City: {city}</p>
-              <p>Name: {name}</p>
-              <p>Adress: {address}</p>
-              <p>Phone number: {phoneNumber}</p>
-              <p>Web page: {webPage}</p>
-              <p>Email: {email}</p>
-            </div>
-            <div className="pitch-info-container-text-center">
-              <h4>Opening hours</h4>
-              <p>Monday: {monday}</p>
-              <p>Tuesday: {tuesday}</p>
-              <p>Wednesday: {wednesday}</p>
-              <p>Thursday: {thursday}</p>
-              <p>Friday: {friday}</p>
-              <p>Saturday: {saturday}</p>
-              <p>Sunday: {sunday}</p>
-            </div>
-            <div className="pitch-info-container-text-right">
-              <h4>More</h4>
-              <p>
-                Parking:
-                {parking ? (
-                  <Check2 color="green" size={26} className="check-icon" />
-                ) : (
-                  <X color="red" size={28} />
-                )}
-              </p>
-              <p>
-                Dressing room:
-                {dressingRoom ? (
-                  <Check2 color="green" size={26} className="check-icon" />
-                ) : (
-                  <X color="red" size={28} />
-                )}
-              </p>
-              <p>
-                Toilet:
-                {toilet ? (
-                  <Check2 color="green" size={26} className="check-icon" />
-                ) : (
-                  <X color="red" size={28} />
-                )}
-              </p>
-              <p>
-                Prize: {prize}
-                <span>/h</span>
-              </p>
-            </div>
+  const item = items.find((item) => item.id === Number(id));
+
+  if (!item) {
+    return (
+      <div className="vh">
+        <h2>This page does not exist</h2>
+        <Link to="/" className="not__exit-btn">
+          BACK TO HOME
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div className="pitch-info-container">
+      <div className="pitch-info-container-map" key={id}>
+        <h4 className="pitch-info-container-title">Info</h4>
+        <div className="pitch-info-container-text-top">
+          <div className="pitch-info-container-text-left">
+            <h4>Football pitch</h4>
+            <p>City: {item.city}</p>
+            <p>Name: {item.name}</p>
+            <p>Adress: {item.address}</p>
+            <p>Phone number: {item.phoneNumber}</p>
+            <p>Web page: {item.webPage}</p>
+            <p>Email: {item.email}</p>
           </div>
-          <div className="pitch-info-container-text-middle">
-            <h4 className="pitch-info-container-photos-title">Photos</h4>
-            <div className="pitch-info-container-photos">
-              <div className="pitch-info-container-photos-1">
-                <img
-                  className="pitch-info-container-photos-1-img"
-                  src={photo1}
-                  alt="basketball place."
-                />
-              </div>
-              <div className="pitch-info-container-photos-2">
-                <img
-                  className="pitch-info-container-photos-2-img"
-                  src={photo2}
-                  alt="football pitch."
-                />
-              </div>
-              <div className="pitch-info-container-photos-3">
-                <img
-                  className="pitch-info-container-photos-3-img"
-                  src={photo3}
-                  alt="football pitch with some people who plays."
-                />
-              </div>
+          <div className="pitch-info-container-text-center">
+            <h4>Opening hours</h4>
+            <p>Monday: {item.monday}</p>
+            <p>Tuesday: {item.tuesday}</p>
+            <p>Wednesday: {item.wednesday}</p>
+            <p>Thursday: {item.thursday}</p>
+            <p>Friday: {item.friday}</p>
+            <p>Saturday: {item.saturday}</p>
+            <p>Sunday: {item.sunday}</p>
+          </div>
+          <div className="pitch-info-container-text-right">
+            <h4>More</h4>
+            <p>
+              Parking:
+              {item.parking ? (
+                <Check2 color="green" size={26} className="check-icon" />
+              ) : (
+                <X color="red" size={28} />
+              )}
+            </p>
+            <p>
+              Dressing room:
+              {item.dressingRoom ? (
+                <Check2 color="green" size={26} className="check-icon" />
+              ) : (
+                <X color="red" size={28} />
+              )}
+            </p>
+            <p>
+              Toilet:
+              {item.toilet ? (
+                <Check2 color="green" size={26} className="check-icon" />
+              ) : (
+                <X color="red" size={28} />
+              )}
+            </p>
+            <p>
+              Prize: {item.prize}
+              <span>/h</span>
+            </p>
+          </div>
+        </div>
+        <div className="pitch-info-container-text-middle">
+          <h4 className="pitch-info-container-photos-title">Photos</h4>
+          <div className="pitch-info-container-photos">
+            <div className="pitch-info-container-photos-1">
+              <img
+                className="pitch-info-container-photos-1-img"
+                src={item.photo1}
+                alt="basketball place."
+              />
+            </div>
+            <div className="pitch-info-container-photos-2">
+              <img
+                className="pitch-info-container-photos-2-img"
+                src={item.photo2}
+                alt="football pitch."
+              />
+            </div>
+            <div className="pitch-info-container-photos-3">
+              <img
+                className="pitch-info-container-photos-3-img"
+                src={item.photo3}
+                alt="football pitch with some people who plays."
+              />
             </div>
           </div>
         </div>
-      );
-    });
-
-  return <div className="pitch-info-container">{pitchInfo}</div>;
+      </div>
+    </div>
+  );
 };
 
 export default PitchInfo;
