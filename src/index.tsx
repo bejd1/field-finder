@@ -41,7 +41,7 @@ root.render(
   <BrowserRouter>
     <Nav />
     <Routes>
-      <Route path="/Pitch-Finderr" element={<App />} />
+      <Route path="/Pitch-Finder" element={<App />} />
       <Route path="contact" element={<Contact />} />
       <Route path="/pitch/:id" element={<PitchInfo {...pitch} />} />
 
@@ -50,7 +50,7 @@ root.render(
         element={
           <div className="not__exit">
             <h1 className="not__exits">This page does not exist</h1>
-            <Link to="/Pitch-Finderr" className="not__exit-btn">
+            <Link to="/Pitch-Finder" className="not__exit-btn">
               BACK TO HOME
             </Link>
           </div>

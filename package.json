@@ -1,7 +1,7 @@
 {
   "name": "fieldfinder",
   "version": "0.1.0",
-  "homepage": "https://bejd1.github.io/Pitch-Finderr/",
+  "homepage": "https://bejd1.github.io/Pitch-Finder/",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.15",
