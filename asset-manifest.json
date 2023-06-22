@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/field-finder/static/css/main.c0b11fb4.css",
+    "main.js": "/field-finder/static/js/main.dec498be.js",
+    "static/media/pic2.jpg": "/field-finder/static/media/pic2.0ba6a323fa1f86e4c09d.jpg",
+    "static/media/navigation@3x.png": "/field-finder/static/media/navigation@3x.e3fabf30aeb806ad9695.png",
+    "static/media/pic3.jpg": "/field-finder/static/media/pic3.df76417b19f97fdf8a4f.jpg",
+    "static/media/pic1.jpg": "/field-finder/static/media/pic1.1a8c6a22aa410a8504ad.jpg",
+    "index.html": "/field-finder/index.html",
+    "main.c0b11fb4.css.map": "/field-finder/static/css/main.c0b11fb4.css.map",
+    "main.dec498be.js.map": "/field-finder/static/js/main.dec498be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0b11fb4.css",
+    "static/js/main.dec498be.js"
+  ]
+}
