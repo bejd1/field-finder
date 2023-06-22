@@ -29,12 +29,7 @@
   font-family: var(--font-poppins);
 }
 
-.instagram-icon,
-.twitter-icon,
-.facebook-icon {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
+.social-container-icons img {
   cursor: pointer;
 }
 
@@ -44,12 +39,5 @@
   }
   .social-container-icons {
     gap: 30px;
-  }
-  .instagram-icon,
-  .twitter-icon,
-  .facebook-icon {
-    width: 37px;
-    height: 37px;
-    flex-shrink: 0;
   }
 }

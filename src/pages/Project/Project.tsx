@@ -1,7 +1,9 @@
 import { FunctionComponent, useRef } from "react";
-import FrameComponent from "../../components/Frame Components/FrameComponent";
 import "./Project.css";
 import { useInView } from "framer-motion";
+import { Houses, Phone } from "react-bootstrap-icons";
+import GroupsIcon from "@mui/icons-material/Groups";
+import Whatshot from "@mui/icons-material/Whatshot";
 
 const Project: FunctionComponent = () => {
   const ref = useRef(null);
@@ -18,23 +20,23 @@ const Project: FunctionComponent = () => {
           transition: "all 1.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
-        <FrameComponent
-          groupLight="/group-light.svg"
-          teamFinder="Team finder"
-          phoneLight="/phone-light.svg"
-          mobileApp="Mobile app"
-          propOverflow="hidden"
-          propWidth="88px"
-        />
+        <div className="project-mobile-item">
+          <Phone style={{ fontSize: "70px" }} />
+          <p>Mobile app</p>
+        </div>
 
-        <FrameComponent
-          groupLight="/calories-light.svg"
-          teamFinder="More sports"
-          phoneLight="/home-light.svg"
-          mobileApp="More locations"
-          propOverflow="unset"
-          propWidth="116px"
-        />
+        <div className="project-location-item">
+          <Houses style={{ fontSize: "70px" }} />
+          <p>More locations</p>
+        </div>
+        <div className="project-moresports-item">
+          <Whatshot style={{ fontSize: "70px" }} />
+          <p>More sports</p>
+        </div>
+        <div className="project-teamfinder-item">
+          <GroupsIcon style={{ fontSize: "70px" }} />
+          <p>Team Finder</p>
+        </div>
       </div>
     </div>
   );

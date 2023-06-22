@@ -13,7 +13,7 @@ const NavigationTop = () => {
   };
   return (
     <div className="nav">
-      <Link to="/Pitch-Finder" className="nav-logo">
+      <Link to="field-finder" className="nav-logo">
         <b className="nav-logo-top">
           <span className="nav-logo-top-text">Field</span>
           <span className="nav-logo-top-text2">Finder</span>
@@ -24,14 +24,14 @@ const NavigationTop = () => {
       </Link>
       <div className="nav-links">
         <Link
-          to="/Pitch-Finder"
+          to="field-finder"
           className="nav-links-home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           HOME
         </Link>
         <Link
-          to="/Pitch-Finder"
+          to="field-finder"
           className="nav-links-contact"
           onClick={scrollToContact}
         >

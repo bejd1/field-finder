@@ -39,7 +39,7 @@ const PitchInfo: React.FC<PitchProps> = () => {
     return (
       <div className="not__exit">
         <h1 className="not__exits">This page does not exist</h1>
-        <Link to="/Pitch-Finder" className="not__exit-btn">
+        <Link to="/field-finder" className="not__exit-btn">
           BACK TO HOME
         </Link>
       </div>

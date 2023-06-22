@@ -1,10 +1,14 @@
 {
   "name": "fieldfinder",
   "version": "0.1.0",
-  "homepage": "https://bejd1.github.io/Pitch-Finder/",
+  "homepage": "https://bejd1.github.io/field-finder",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.15",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.5",
     "@nextui-org/react": "^1.0.0-beta.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -27,7 +31,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

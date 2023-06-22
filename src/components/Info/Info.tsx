@@ -23,5 +23,3 @@ export const Info: React.FC<InfoProps> = ({ isShown }) => {
     </>
   );
 };
-
-// Now you can search only pitche's in the biggest cities in UK.

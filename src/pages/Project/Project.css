@@ -20,11 +20,18 @@
   font-family: var(--font-poppins);
 }
 
+.project-container p {
+  font-size: 16px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
 .project-container h3 {
   align-self: stretch;
   text-align: center;
   font-weight: 300;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .project-container-items {
@@ -51,6 +58,11 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .project-container-items p {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 420px) {
   .project-container h3 {
     font-size: 24px;

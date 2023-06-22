@@ -27,14 +27,14 @@ export const Menu: React.FC<MenuProps> = ({ toggleMenu }) => {
     <div className="menu">
       <div className="menu-list">
         <Link
-          to="/Pitch-Finder"
+          to="/field-finder"
           className="menu-list-home"
           onClick={handleCloseHome}
         >
           Home
         </Link>
         <Link
-          to="/Pitch-Finder"
+          to="/field-finder"
           className="menu-list-contact"
           onClick={handleCloseContact}
         >

@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import "./Main.css";
 import { motion } from "framer-motion";
+import { JournalCheck, Search, Stopwatch } from "react-bootstrap-icons";
 
 const Main: FunctionComponent = () => {
   return (
@@ -16,7 +17,7 @@ const Main: FunctionComponent = () => {
           }}
         >
           <div className="main-container-left">
-            <img className="time-light-icon" alt="" src="/time-light.svg" />
+            <Stopwatch style={{ fontSize: "60px" }} />
             <div className="main-container-left-text">
               <p>Save your time by choosing the nearest pitch</p>
             </div>
@@ -30,7 +31,7 @@ const Main: FunctionComponent = () => {
           }}
         >
           <div className="main-container-center">
-            <img className="time-light-icon" alt="" src="/search-alt.svg" />
+            <Search style={{ fontSize: "60px" }} />
             <div className="main-container-center-text">
               <p>Easy to find</p>
             </div>
@@ -44,11 +45,7 @@ const Main: FunctionComponent = () => {
           }}
         >
           <div className="main-container-right">
-            <img
-              className="time-light-icon"
-              alt=""
-              src="/order-duotone-line.svg"
-            />
+            <JournalCheck style={{ fontSize: "60px" }} />
             <div className="main-container-right-text">
               <p>Booking when you need</p>
             </div>
